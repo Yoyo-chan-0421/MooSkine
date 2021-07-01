@@ -22,7 +22,7 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.viewContext, sectionNameKeyPath: nil, cacheName: "notebooks")
         fetchedResultsController.delegate = self
         do{
             try fetchedResultsController.performFetch()
@@ -41,12 +41,12 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setUpFetchResultViewController()
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: false)
             tableView.reloadRows(at: [indexPath], with: .fade)
         }
-        setUpFetchResultViewController()
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -127,12 +127,6 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = fetchedResultsController
-            .sections{
-            return sections.count
-        }else{
-            return 1
-        }
         return fetchedResultsController.sections?.count ?? 1
     }
     
@@ -180,22 +174,22 @@ extension NotebooksListViewController: NSFetchedResultsControllerDelegate{
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
-
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView?.endUpdates()
     }
-
-
-
+    
+    
+    
 func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-            case .insert:
-                tableView.insertRows(at: [newIndexPath!], with: .fade)
-                break
-            case .delete:
-                tableView.deleteRows(at: [indexPath!], with: .fade)
-            default:
-                break
-        }
+    switch type {
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .fade)
+            break
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .fade)
+        default:
+            break
     }
+}
 }

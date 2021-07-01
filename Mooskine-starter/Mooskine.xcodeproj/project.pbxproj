@@ -25,6 +25,8 @@
 		BE374211268B7E1E00AC5314 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE374210268B7E1E00AC5314 /* DataController.swift */; };
 		BEECDDDB268CDE67005429B7 /* Notebook + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECDDDA268CDE67005429B7 /* Notebook + Extension.swift */; };
 		BEECDDDD268CDEBF005429B7 /* Note+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEECDDDC268CDEBF005429B7 /* Note+Extension.swift */; };
+		BEEDE618268E27AA000388E3 /* UpdateToAttributedStrings.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = BEEDE617268E27AA000388E3 /* UpdateToAttributedStrings.xcmappingmodel */; };
+		BEEDE61A268E27CD000388E3 /* UpdateToAttributedStringsPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEDE619268E27CD000388E3 /* UpdateToAttributedStringsPolicy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		BE374210268B7E1E00AC5314 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BEECDDDA268CDE67005429B7 /* Notebook + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notebook + Extension.swift"; sourceTree = "<group>"; };
 		BEECDDDC268CDEBF005429B7 /* Note+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Extension.swift"; sourceTree = "<group>"; };
+		BEEDE614268E2087000388E3 /* Mooskine-7-1-2021-attributedText.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Mooskine-7-1-2021-attributedText.xcdatamodel"; sourceTree = "<group>"; };
+		BEEDE617268E27AA000388E3 /* UpdateToAttributedStrings.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UpdateToAttributedStrings.xcmappingmodel; sourceTree = "<group>"; };
+		BEEDE619268E27CD000388E3 /* UpdateToAttributedStringsPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateToAttributedStringsPolicy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,8 @@
 				BEECDDD9268CDE4F005429B7 /* ManageObjectExtension */,
 				BE1451232687D885001776FA /* Mooskine.xcdatamodeld */,
 				BE374210268B7E1E00AC5314 /* DataController.swift */,
+				BEEDE617268E27AA000388E3 /* UpdateToAttributedStrings.xcmappingmodel */,
+				BEEDE619268E27CD000388E3 /* UpdateToAttributedStringsPolicy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,12 +315,14 @@
 			files = (
 				BEECDDDB268CDE67005429B7 /* Notebook + Extension.swift in Sources */,
 				039B105C1EDC5469002EA94F /* AppDelegate.swift in Sources */,
+				BEEDE618268E27AA000388E3 /* UpdateToAttributedStrings.xcmappingmodel in Sources */,
 				03B2699E1F2F8AAA00C7433C /* NotebookCell.swift in Sources */,
 				BE1451252687D885001776FA /* Mooskine.xcdatamodeld in Sources */,
 				03B2699B1F2F8AA100C7433C /* NotebooksListViewController.swift in Sources */,
 				BE374211268B7E1E00AC5314 /* DataController.swift in Sources */,
 				03B2699C1F2F8AA100C7433C /* NoteDetailsViewController.swift in Sources */,
 				03B269A01F2F8AAD00C7433C /* Cell.swift in Sources */,
+				BEEDE61A268E27CD000388E3 /* UpdateToAttributedStringsPolicy.swift in Sources */,
 				03B2699D1F2F8AA100C7433C /* NotesListViewController.swift in Sources */,
 				BEECDDDD268CDEBF005429B7 /* Note+Extension.swift in Sources */,
 				03B2699F1F2F8AAA00C7433C /* NoteCell.swift in Sources */,
@@ -565,9 +574,10 @@
 		BE1451232687D885001776FA /* Mooskine.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BEEDE614268E2087000388E3 /* Mooskine-7-1-2021-attributedText.xcdatamodel */,
 				BE1451242687D885001776FA /* Mooskine.xcdatamodel */,
 			);
-			currentVersion = BE1451242687D885001776FA /* Mooskine.xcdatamodel */;
+			currentVersion = BEEDE614268E2087000388E3 /* Mooskine-7-1-2021-attributedText.xcdatamodel */;
 			path = Mooskine.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
